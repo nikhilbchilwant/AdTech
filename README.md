@@ -1,4 +1,4 @@
-This repository is the parent repository for the all applications that belong to the AdTech platform. The real-life platforms are very complicated and so this repository considers a simplified scenario of real time bidding.
+This repository is the parent repository for the all applications that belong to the AdTech platform. The real-life platforms are very complicated and so this repository considers a simplified scenario.
 
 ## Overview
 ![](drawings/modules.png)
@@ -9,6 +9,7 @@ Overall, we need to build a system which needs to satisfy below requirements:
 - Highly available : If the system goes down, there will be huge loss of revenue.
 - Highly scalable : The volume is high and it continuously growing e.g. ProSieben's platform handles 600K requests per second.
 - Agile : The platform needs to adapt to the changing business requirements continuously.
+- Low latency : All these steps need to happen without hampering the webpage user experience.
 
 ## Details 
 
@@ -16,14 +17,18 @@ A simplified publish-bid-win scenario looks like below. It is taken from the [Ae
 
 ![](drawings/publish-bid-win.png)
 
-Note : A 'tag' is used to collect user interaction events for the ad. To simplify the scenario, we do not bother about collecting data about the events.
+Note : A 'tag' is used to collect user interaction events for the ad. To simplify the scenario, we will not collect the event data.
 
-This project is divided into four applications: seller, ad-exchange, buyer and ad server. For each application, there is a corresponding repository as given below. I use microservice based architecture for developing them. I used the [Spring Microservices in Action](https://www.manning.com/books/spring-microservices-in-action) book for reference.
+This project is divided into four applications: seller, ad-exchange, buyer and ad server. For each application, there is a corresponding repository as given below. I am using microservice based architecture for developing them as it offers agility. I used the [Spring Microservices in Action](https://www.manning.com/books/spring-microservices-in-action) book for reference.
 
 - Seller
 - Ad exchange
 - Buyer
 - Ad server
+
+## Tech stack
+The platform will built using the same tech stack used in the [Spring Microservices in Action](https://www.manning.com/books/spring-microservices-in-action) book.  
+![](drawings/tech-stack.png)
 
 ## References
 
