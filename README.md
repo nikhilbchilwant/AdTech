@@ -24,7 +24,7 @@ This project is divided into four applications: seller, ad-exchange, buyer and a
 - Seller
 - Ad exchange
 - Buyer
-- Ad server
+- [Ad server](https://github.com/nikhilbchilwant/Ad-server)
 
 ## Tech stack
 The platform will built using the same tech stack used in the [Spring Microservices in Action](https://www.manning.com/books/spring-microservices-in-action) book.  
